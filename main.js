@@ -192,5 +192,3 @@ enhance("channel-link4");
 enhance("channel-link5");
 enhance("WARD81");
 enhance("twin");
-
-// timeline

@@ -118,7 +118,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 400px;
 }
 
 .artistmenu ul {
@@ -317,7 +316,6 @@ p {
   font-family: "Roboto Mono", monospace;
   font-size: clamp(5pt, 60vw, 130pt);
   font-weight: bold;
-  color: #ffe500;
   margin-top: 5px;
   padding: 0px;
 }
@@ -368,10 +366,9 @@ p {
 }
 
 .fancy:hover>.outer>.inner>.letter {
-  background: #ffe500;
   background-size: 1000%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: initial;
   animation: background-pan 150s linear infinite;
 }
 
@@ -589,6 +586,8 @@ p {
   background: ghostwhite;
 }
 
+
+
 .timeline .column {
   margin: 40px 40px 40px 120px;
 }
@@ -625,4 +624,27 @@ p {
 
 .timeline .column .description {
   border-left: 2px solid #000;
+}
+
+
+.dragmouse:hover {
+  cursor: none;
+  /* Hide the default cursor */
+}
+
+.dragmouse:hover::before {
+  content: "drag left";
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 120px;
+  text-align: center;
+  position: fixed;
+  top: calc(50% - 60px + 28.5vmin);
+  left: calc(25% - 60px);
+  z-index: -1;
 }
