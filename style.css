@@ -163,7 +163,7 @@ p {
   background-color: #ffe500;
   font-family: "Archivo Black", sans-serif;
   font-weight: bold;
-  font-size: 60pt;
+  font-size: clamp(5pt, 5vw, 60pt);
   border: none;
 }
 
@@ -455,7 +455,7 @@ p {
   transform: translate(20%, -50%) rotate(8deg);
 }
 
-.container {
+.container2 {
   width: 100%;
   margin: 2rem auto;
 }
@@ -528,13 +528,6 @@ p {
 
 
 /* wavy background */
-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 20vm;
-}
 
 .yellow {
   background-color: #ffe500;
@@ -562,4 +555,74 @@ section {
   align-items: end;
   margin-left: auto;
   padding-right: 5vw;
+}
+
+
+
+
+
+/* timeline */
+
+.bigdate {
+  font-size: clamp(5pt, 6vw, 70pt);
+  color: ghostwhite;
+  font-family: serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.timeline {
+  width: 70%;
+  margin-left: 15%;
+  position: relative;
+  padding: 20px;
+  margin-top: -350px;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 100%;
+  background: ghostwhite;
+}
+
+.timeline .column {
+  margin: 40px 40px 40px 120px;
+}
+
+.timeline .column .title {
+  position: relative;
+}
+
+
+.timeline .column .title .bigdate:before {
+  content: "";
+  position: absolute;
+  left: -62px;
+  top: 80px;
+  width: 10px;
+  height: 10px;
+  background: ghostwhite;
+  border: 3px solid ghostwhite;
+}
+
+.secHeading {
+  margin-top: -50px;
+  font-size: clamp(5pt, 3vw, 30pt);
+  color: black;
+  text-transform: uppercase;
+}
+
+.timeline .column .description p {
+  font-size: clamp(5pt, 3vw, 10pt);
+  line-height: 25px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.timeline .column .description {
+  border-left: 2px solid #000;
 }
