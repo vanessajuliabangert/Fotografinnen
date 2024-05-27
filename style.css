@@ -154,13 +154,8 @@ p {
 }
 
 /* Button */
-.moreBtn {
-  background-color: #ffe500;
-  font-size: 20pt;
-  cursor: pointer;
-}
 
-#moreBtn {
+.thickbuttonoptic {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 10px;
@@ -171,6 +166,7 @@ p {
   font-size: 60pt;
   border: none;
 }
+
 
 .btn {
   background-color: #ffe500;
@@ -528,4 +524,42 @@ p {
 .center figure {
   margin: 40px;
   /* This creates a 20px gap between figures (10px on each side) */
+}
+
+
+/* wavy background */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20vm;
+}
+
+.yellow {
+  background-color: #ffe500;
+}
+
+.spacer {
+  aspect-ratio: 900/600;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.yellowWave {
+  background-image: url(yellowWave.svg);
+}
+
+
+
+
+.lifeCover {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: end;
+  margin-left: auto;
+  padding-right: 5vw;
 }

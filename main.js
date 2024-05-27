@@ -192,3 +192,34 @@ enhance("channel-link4");
 enhance("channel-link5");
 enhance("WARD81");
 enhance("twin");
+
+// timeline
+
+$(document).ready(function () {
+  var slideOne, slideTwo, allContent;
+  slideTwo = $(".parent-timeline  div.slide-two ");
+  allContent = $(".all-content");
+
+  function reset() {
+    if ($(window).width() > 750) {
+      slideTwo.css("padding-top", slideTwo.find(".all-content").height() + 10);
+      allContent.css("margin-bottom", allContent.height() + 10);
+      allContent.last().css("margin-bottom", "20px");
+    } else {
+      slideTwo.css("padding-top", "0");
+      allContent.css("margin-bottom", "70px");
+    }
+  }
+  reset();
+
+  $(window).on("scroll", function () {
+    allContent.each(function () {
+      if ($(window).scrollTop() >= $(this).offset().top - 250) {
+        $(this).find(".texts").animate({ opacity: "1" }, 600);
+      }
+    });
+  });
+  $(window).on("resize", function () {
+    reset();
+  });
+});
