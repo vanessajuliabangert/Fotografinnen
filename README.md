@@ -1,5 +1,4 @@
 # Fotografinnen
-# Welcome to the Female Photographers Wiki!
 
 ## Introduction
 Welcome to the Female Photographers Wiki! This project aims to celebrate and highlight the contributions of female photographers throughout history. As a participant in a university course focusing on female photographers, I've decided to create this wiki as a platform for learning, discussion, and appreciation of the work of women in photography.
