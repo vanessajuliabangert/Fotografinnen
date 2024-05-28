@@ -152,6 +152,21 @@ p {
   margin-left: 35pt;
 }
 
+.backmenu .navbar ul li a {
+  transition: all 0.5s ease-in-out;
+  padding-bottom: 100px;
+}
+
+.backmenu .navbar ul li {
+  transition: all 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+
+.backmenu .navbar ul li a:hover {
+  letter-spacing: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
 /* Button */
 
 .thickbuttonoptic {
@@ -719,125 +734,6 @@ p {
 
 
 
-.mas {
-
-  color: #000;
-
-  font-size: 11px;
-  margin-top: 17px;
-  overflow: hidden;
-  font-weight: bold;
-
-}
-
-@-webkit-keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-}
-
-@keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-}
-
-@-webkit-keyframes ani2 {
-  from {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-
-  to {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-}
-
-@keyframes ani2 {
-  from {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-
-  to {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-}
-
-
-.button-container-3 {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8vh;
-  overflow: hidden;
-  border: 1px solid #000;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  transition: 0.5s;
-  letter-spacing: 1px;
-  border-radius: 8px;
-
-  button {
-    width: 101%;
-    height: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 1px;
-    font-weight: bold;
-
-
-    @include button(#000, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
-      7100%,
-      100%,
-      none,
-      #fff);
-    cursor: pointer;
-    -webkit-animation: ani2 0.7s steps(70) forwards;
-    animation: ani2 0.7s steps(70) forwards;
-
-    &:hover {
-      -webkit-animation: ani 0.7s steps(70) forwards;
-      animation: ani 0.7s steps(70) forwards;
-    }
-  }
-}
-
-.button-container-3 .button {
-  width: 101%;
-  height: 100%;
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
-
-.button-container-3 .button:hover {
-  -webkit-animation: ani 0.7s steps(70) forwards;
-  animation: ani 0.7s steps(70) forwards;
-}
-
-
-
-
 /* hiden animation claude cahun */
 @-webkit-keyframes ani {
   from {
@@ -934,3 +830,6 @@ p {
 #twinheading .mirror:hover {
   transform: scaleX(-2);
 }
+
+
+/* mouse follower */
