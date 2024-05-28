@@ -166,6 +166,20 @@ p {
   border: none;
 }
 
+.thickbuttonopticblue {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #01348f;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: clamp(5pt, 5vw, 60pt);
+  border: none;
+}
+
+
 
 .btn {
   background-color: #ffe500;
@@ -554,6 +568,29 @@ p {
   padding-right: 5vw;
 }
 
+.lifeCover2 {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: start;
+  margin-left: 10%;
+  padding-right: 5vw;
+}
+
+.lifeCover2col {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .lifeCover2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 
 
 
@@ -573,8 +610,8 @@ p {
   margin-left: 15%;
   position: relative;
   padding: 20px;
-  margin-top: -350px;
 }
+
 
 .timeline:before {
   content: "";
@@ -584,6 +621,25 @@ p {
   width: 3px;
   height: 100%;
   background: ghostwhite;
+}
+
+#almeidatimeline:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: rgb(160, 160, 160);
+}
+
+#almeidatimeline .column .title .bigdate:before {
+  content: "";
+  position: absolute;
+  left: -115px;
+  top: 80px;
+  width: 10px;
+  height: 10px;
+  background: rgb(160, 160, 160);
+  border: 3px solid rgb(160, 160, 160);
 }
 
 
@@ -627,9 +683,10 @@ p {
 }
 
 
+
+/* drag effect */
 .dragmouse:hover {
   cursor: none;
-  /* Hide the default cursor */
 }
 
 .dragmouse:hover::before {
@@ -647,4 +704,209 @@ p {
   top: calc(50% - 60px + 28.5vmin);
   left: calc(25% - 60px);
   z-index: -1;
+}
+
+
+/* fancy button index */
+
+
+
+.mas {
+
+  color: #000;
+
+  font-size: 11px;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+
+.button-container-3 {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vh;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+
+  button {
+    width: 101%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+
+    @include button(#000, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+      7100%,
+      100%,
+      none,
+      #fff);
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+
+    &:hover {
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
+    }
+  }
+}
+
+.button-container-3 .button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+
+.button-container-3 .button:hover {
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
+}
+
+
+
+
+/* hiden animation claude cahun */
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+.container {
+  width: 90%;
+  margin-left: 10%;
+  margin-top: -100px;
+  height: 2000px;
+}
+
+.animation {
+  width: 100%;
+  height: 100%;
+  font-size: 11px;
+  text-align: center;
+  background: #565656;
+  border: none;
+  -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+}
+
+.animation:hover {
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
+}
+
+.hidden {
+  position: absolute;
+  width: 100%;
 }
