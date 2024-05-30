@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: white;
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
   overflow-x: hidden;
@@ -100,15 +99,15 @@ p {
   padding: 10px 20px;
 }
 
-.dates {
-  color: black;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
 .img-caption {
   font-size: small;
   color: #adadad;
+}
+
+.dates {
+  color: white;
+  font-size: 20px;
+  background-color: black;
 }
 
 /* Artistmenu */
@@ -144,6 +143,23 @@ p {
   align-items: last baseline;
 }
 
+.artistmenu .navbar ul li {
+  transition: all 0.5s ease-in-out;
+}
+
+.artistmenu .navbar ul li:hover {
+  letter-spacing: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.background-image-container {
+  transition: background-image 2s ease-in-out;
+  background-size: cover;
+}
+
+
+
+
 /* Back menu */
 .backmenu {
   margin-top: 10px;
@@ -166,6 +182,8 @@ p {
   letter-spacing: 7px;
   transition: all 0.5s ease-in-out;
 }
+
+
 
 /* Button */
 
@@ -238,6 +256,10 @@ p {
   border: 8px solid #ffe500;
 }
 
+
+
+
+
 /* Popuo */
 
 .popup {
@@ -281,6 +303,10 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+
+
 
 #image-hover-text {
   display: flex;
@@ -493,6 +519,9 @@ p {
   width: 100%;
   margin: 2rem auto;
 }
+
+
+
 
 .gallery {
   display: grid;

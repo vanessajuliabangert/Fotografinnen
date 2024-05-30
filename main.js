@@ -192,3 +192,15 @@ enhance("channel-link4");
 enhance("channel-link5");
 enhance("WARD81");
 enhance("twin");
+
+// backgorund image change functions
+
+function changeBackground(imageUrl) {
+  const container = document.querySelector(".background-image-container");
+  container.style.backgroundImage = `url(${imageUrl})`;
+}
+
+function resetBackground() {
+  const container = document.querySelector(".background-image-container");
+  container.style.backgroundImage = ""; // or set it to the default background image if necessary
+}
