@@ -17,6 +17,13 @@
 </head>
 
 <body>
+
+  <div class="custom-cursor" id="js-cursor">
+    <div class="cursor__small abs-center" id="js-cursor__small"></div>
+    <div class="cursor__big abs-center" id="js-cursor__big">
+    </div>
+  </div>
+
   <div style="display: flex">
     <h1 id="fixedFotograf" class="fixed">FOTOGRAF</h1>
     <h1 style="color: white">FOTOGRAF</h1>
@@ -27,6 +34,7 @@
     <h3 id="feminin">feminin [die]</h3>
     <h1 id="innen" class="right">INNEN</h1>
   </div>
+
 
 
 
@@ -46,7 +54,7 @@
 
 
   <div class="bottom-text">
-    <button id="moreBtn" class="thickbuttonoptic">MORE</button>
+    <button id="moreBtn" class="thickbuttonoptic curserhover">MORE</button>
 
   </div>
 
@@ -95,79 +103,79 @@
     </div>
   </div>
 
+
+
+  <div class="artistmenu">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a class="btn" href="helenaalmeida.html"> anna atkins </a>
+          <div class="dates">1799 - 1871</div>
+        </li>
+        <li>
+          <a class="btn" href="claudecahun.html"> claude cahun </a>
+          <div class="dates">1894 - 1954</div>
+        </li>
+        <li>
+          <a class="btn" href="helenaalmeida.html"> dahl wolf</a>
+          <div class="dates">1895 - 1989</div>
+        </li>
+        <li>
+          <a class="btn" href="helenaalmeida.html"> barbara brändli </a>
+          <div class="dates">1932 - 2011</div>
+        </li>
+        <li>
+          <a class="btn" href="helenaalmeida.html"> helena almeida </a>
+          <div class="dates">1934 - 2018</div>
+        </li>
+        <li>
+          <a class="btn" href="maryellenmark.html"> mary ellen mark </a>
+          <div class="dates">1942 - 2015</div>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- artist menu plain second version -->
+
   <div class="background-image-container">
-
     <div class="artistmenu">
       <nav class="navbar">
         <ul>
           <li>
-            <a class="btn" href="helenaalmeida.html"> anna atkins </a>
-            <div class="dates">1799 - 1871</div>
-          </li>
-          <li>
-            <a class="btn" href="claudecahun.html"> claude cahun </a>
-            <div class="dates">1894 - 1954</div>
-          </li>
-          <li>
-            <a class="btn" href="helenaalmeida.html"> dahl wolf</a>
-            <div class="dates">1895 - 1989</div>
-          </li>
-          <li>
-            <a class="btn" href="helenaalmeida.html"> barbara brändli </a>
-            <div class="dates">1932 - 2011</div>
-          </li>
-          <li>
-            <a class="btn" href="helenaalmeida.html"> helena almeida </a>
-            <div class="dates">1934 - 2018</div>
-          </li>
-          <li>
-            <a class="btn" href="maryellenmark.html"> mary ellen mark </a>
-            <div class="dates">1942 - 2015</div>
-          </li>
-
-        </ul>
-      </nav>
-    </div>
-
-
-    <!-- artist menu plain second version -->
-
-
-    <div class="artistmenu">
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="helenaalmeida.html"
+            <a class="curserhover" href="helenaalmeida.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Anna+Atkins')"
               onmouseout="resetBackground()">anna atkins</a>
             <div class="dates">1799 - 1871</div>
           </li>
           <li>
-            <a href="claudecahun.html"
+            <a class="curserhover" href="claudecahun.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Claude+Cahun')"
               onmouseout="resetBackground()">claude cahun</a>
             <div class="dates">1894 - 1954</div>
           </li>
           <li>
-            <a href="helenaalmeida.html"
+            <a class="curserhover" href="helenaalmeida.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Dahl+Wolf')"
               onmouseout="resetBackground()">dahl wolf</a>
             <div class="dates">1895 - 1989</div>
           </li>
           <li>
-            <a href="helenaalmeida.html"
+            <a class="curserhover" href="helenaalmeida.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Barbara+Brändli')"
               onmouseout="resetBackground()">barbara brändli</a>
             <div class="dates">1932 - 2011</div>
           </li>
           <li>
-            <a href="helenaalmeida.html"
+            <a class="curserhover" href="helenaalmeida.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Helena+Almeida')"
               onmouseout="resetBackground()">helena almeida</a>
             <div class="dates">1934 - 2018</div>
           </li>
           <li>
-            <a href="maryellenmark.html"
+            <a class="curserhover" href="maryellenmark.html"
               onmouseover="changeBackground('https://via.placeholder.com/1920x1080?text=Mary+Ellen+Mark')"
               onmouseout="resetBackground()">mary ellen mark</a>
             <div class="dates">1942 - 2015</div>
@@ -175,7 +183,6 @@
         </ul>
       </nav>
     </div>
-
 
 
     <div style="width: 20%; margin-left: 78%; padding-bottom: 100px;">
@@ -196,7 +203,7 @@
 
         <div class="line">
           <a id="channel-link" href="https://www.instagram.com/vanessa.bangert/"
-            target="_blank" class="word fancy">
+            target="_blank" class="word fancy curserhover">
             @vanessa.bangert
           </a>
         </div>
@@ -205,7 +212,7 @@
 
   </div>
 
-
+  <script src="mouse.js"></script>
   <script src="main.js"></script>
 </body>
 
