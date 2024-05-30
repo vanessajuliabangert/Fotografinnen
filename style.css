@@ -153,6 +153,8 @@ p {
 }
 
 .background-image-container {
+  height: 100vw;
+  width: 100vw;
   transition: background-image 2s ease-in-out;
   background-size: cover;
 }
