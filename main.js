@@ -195,14 +195,14 @@ enhance("twin");
 
 // backgorund image change functions
 
-function changeBackground(imageUrl) {
+function changeBackground(imagePath) {
   const container = document.querySelector(".background-image-container");
-  container.style.backgroundImage = `url(${imageUrl})`;
+  container.style.backgroundImage = `url(${imagePath})`;
 }
 
 function resetBackground() {
   const container = document.querySelector(".background-image-container");
-  container.style.backgroundImage = ""; // or set it to the default background image if necessary
+  container.style.backgroundImage = `url("landingbackground_white.png")`;
 }
 
 // mouse follower

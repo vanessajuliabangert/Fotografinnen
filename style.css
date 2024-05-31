@@ -23,7 +23,7 @@ h1 {
   font-family: "Archivo Black", sans-serif;
   font-size: clamp(5pt, 80vw, 125pt);
   font-weight: bold;
-  color: #ffe500;
+  color: black;
   margin-top: 50px;
   margin-left: 27pt;
   margin-bottom: 0pt;
@@ -126,7 +126,7 @@ p {
 }
 
 .artistmenu ul li {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .artistmenu ul li a {
@@ -153,11 +153,11 @@ p {
 }
 
 .background-image-container {
-  height: 100vw;
-  width: 100vw;
+  width: auto;
   transition: background-image 2s ease-in-out;
   background-size: contain;
 }
+
 
 
 
@@ -231,14 +231,20 @@ p {
 #feminin {
   font-size: 40pt;
   margin-bottom: 12px;
-  /* Margin between "feminin [die]" and "INNEN" */
+  transition: all 0.5s ease-in-out;
+  color: #ffe500;
+}
+
+#feminin:hover {
+  transition: all 0.5s ease-in-out;
+  letter-spacing: 7px;
 }
 
 #landingpagepicture {
   width: 745pt;
   height: 520pt;
-  margin-top: -24pt;
-  margin-left: 35pt;
+  margin-top: -25pt;
+  margin-left: 34pt;
   background-color: black;
 }
 
@@ -258,11 +264,7 @@ p {
   border: 8px solid #ffe500;
 }
 
-
-
-
-
-/* Popuo */
+/* Popup */
 
 .popup {
   display: none;
@@ -854,12 +856,15 @@ p {
 }
 
 
+
 #twinheading h3 {
   transform: scaleX(2);
+  transition: transform 0.5s ease;
 }
 
 #twinheading .mirror:hover {
   transform: scaleX(-2);
+  transition: transform 0.5s ease;
 }
 
 
