@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto Mono", monospace;
-  font-size: 16px;
+  font-size: clamp(5pt, 4vw, 20pt);
   overflow-x: hidden;
 }
 
@@ -50,7 +50,7 @@ p {
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
   color: black;
-  font-size: clamp(5pt, 2vw, 20pt);
+  font-size: clamp(5pt, 4vw, 20pt);
   text-align: justify;
 }
 
@@ -183,6 +183,25 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  .backmenu {
+
+    margin-top: 5px;
+    margin-left: 3px;
+    display: flexbox;
+    padding: 0px 0px;
+  }
+
+  .navbar ul li a {
+    padding: 0px 0px;
+  }
+
+}
+
 
 
 /* Button */
@@ -253,6 +272,15 @@ p {
   margin-right: 50px;
 }
 
+@media (max-width: 600px) {
+  #landingcontent {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+
 #rectangle {
   width: 70%;
   height: fit-content;
@@ -306,14 +334,12 @@ p {
   cursor: pointer;
 }
 
-
-
-
-
 #image-hover-text {
   display: flex;
   justify-content: flex-start;
 }
+
+
 
 #image-track .image {
   width: 40vmin;
@@ -371,7 +397,7 @@ p {
   text-transform: uppercase;
   transition: opacity 250ms ease;
   font-family: "Roboto Mono", monospace;
-  font-size: clamp(5pt, 60vw, 130pt);
+  font-size: clamp(5pt, 10vw, 130pt);
   font-weight: bold;
   margin-top: 5px;
   padding: 0px;
@@ -761,7 +787,7 @@ p {
 }
 
 
-/* fancy button index */
+
 
 
 
@@ -905,4 +931,41 @@ p {
   margin: -40px 0 0 -40px;
   transform: scale(0);
   transition: all 320ms cubic-bezier(.26, .01, .17, 1);
+}
+
+
+/* helena almeida content  */
+#HA_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#HA_container p {
+  font-size: clamp(5pt, 2vw, 20pt);
+}
+
+.big_content {
+  width: 30%;
+}
+
+.small_content {
+  width: 20%;
+}
+
+
+@media (max-width: 600px) {
+  #HA_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+  .small_content,
+  .content_25 {
+    width: 90%;
+    margin-top: 5px;
+  }
+
 }

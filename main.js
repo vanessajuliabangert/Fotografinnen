@@ -42,12 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
     "Fotografinnen",
     "Fotografin",
     "Frau",
+    "bild",
+    "Körper",
   ];
 
   highlightWords("landingcontent", wordsToHighlight, "#ffe500");
   highlightWords("WARD81text", wordsToHighlight, "#ffe500");
   highlightWords("StreetwiseText", wordsToHighlight, "#ffe500");
   highlightWords("TwinsText", wordsToHighlight, "#ffe500");
+  highlightWords("helenaalmeidazitat", wordsToHighlight, "#01348f");
 });
 
 // MORE button
@@ -207,29 +210,3 @@ function resetBackground() {
   const container = document.querySelector(".background-image-container");
   container.style.backgroundImage = `url("landingbackground_white.png")`;
 }
-
-// mouse follower
-document.addEventListener("DOMContentLoaded", () => {
-  const cursor = document.getElementById("js-cursor");
-  const cursorBig = document.getElementById("js-cursor__big");
-  const cursorSmall = document.getElementById("js-cursor__small");
-  const links = document.querySelectorAll(".curserhover, .call-to-action");
-
-  // Update cursor position on mouse move
-  window.addEventListener("mousemove", (e) => {
-    cursor.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
-  });
-
-  // Add event listeners to links
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      cursorBig.style.transform = "scale(1)";
-      cursorSmall.style.transform = "scale(0)";
-    });
-
-    link.addEventListener("mouseleave", () => {
-      cursorBig.style.transform = "scale(0)";
-      cursorSmall.style.transform = "scale(1)";
-    });
-  });
-});

@@ -13,6 +13,12 @@
 </head>
 
 <body>
+  <div class="custom-cursor" id="js-cursor">
+    <div class="cursor__small abs-center" id="js-cursor__small"></div>
+    <div class="cursor__big abs-center" id="js-cursor__big">
+    </div>
+  </div>
+
   <div id="text">
     <div class="center">
       <h2 id="channel-link" class="wordartistheading fancy"
@@ -43,8 +49,8 @@
     </nav>
   </div>
 
+  <!-- drag mous
   <div style="display: flex;">
-
     <div class="dragmouse" style="width: 50%; height: 56vmin;"></div>
     <div style="margin-bottom: 100px;">
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
@@ -57,12 +63,108 @@
           draggable="false" />
       </div>
     </div>
+  </div>
+  -->
 
+
+
+  <div id="image-track" class="curserhover" data-mouse-down-at="0"
+    data-prev-percentage="0">
+    <img class="image"
+      src="helenaalmeida-fotos/Serralves-Museum-2015-Helena-Almeida-FS-0554-Pintura-Habitada-foto-de-Filipe-Braga-860x660.jpg"
+      draggable="false" />
+
+    <img class="image"
+      src="helenaalmeida-fotos/Study-for-Inner-Improveme-001.avif"
+      draggable="false" />
+  </div>
+
+  <div id="HA_container"
+    style="margin-top: 56vmin; margin-left: 3%; margin-right: 3%;">
+    <p class="small_content" id="helenaalmeidazitat">
+      „Das Bild von meinem Körper ist nicht mein Bild. Ich mache keine Show,
+      sondern ich male ein Bild“, sagt Helena Almeida über ihre Kunst. 1934
+      ist
+      sie in Lissabon geboren, als Tochter von Leopoldo de Almeida, dem
+      Bildhauer
+      des portugiesischen Salazar-Regimes. Ihm hat sie Modell gesessen von
+      klein
+      auf, aber anders als er wollte sie keine politisch korrekte
+      Auftragsarbeit
+      machen.
+      <!-- quelle: https://monde-diplomatique.de/artikel/!3202447 -->
+    </p>
+
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9217_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9218_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+  </div>
+
+  <div id="HA_container" style="margin: 0 3%;">
+
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9218_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+
+    <p class="small_content" id="helenaalmeidazitat">
+      So sucht sie Brüche, Übergangsstationen, vermischt Performance
+      mit
+      dem starren Bild. „Wir sehen den Körper an, und der Körper endet
+      plötzlich,
+      an den Händen, den Füßen. Er endet einfach. Mehr gibt es nicht – es ist
+      wie
+      ein Kliff über dem Meer. Warum höre ich dort auf und beginne hier, warum
+      bin
+      ich an diese Form gebunden, warum bin ich so isoliert und warum sind es
+      die
+      anderen Körper? Ich wünsche mir häufig, mich in etwas anderes zu
+      verwandeln.“
+      <!-- quelle: https://monde-diplomatique.de/artikel/!3202447 -->
+    </p>
+
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9219_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+  </div>
+
+  <div id="HA_container" style="margin: 0 3%;">
+
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9217_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+    <figure class="big_content">
+      <img class="image" src="/helenaalmeida-fotos/thumb_9218_0_0_0_0_crop.jpg"
+        width="100%" height="auto" />
+      <figcaption class="img-caption"></figcaption>
+    </figure>
+
+    <p class="small_content" id="helenaalmeidazitat">
+      Warum höre ich dort auf und beginne hier, warum
+      bin
+      ich an diese Form gebunden, warum bin ich so isoliert und warum sind es
+      die
+      anderen Körper? Ich wünsche mir häufig, mich in etwas anderes zu
+      verwandeln.“
+      <!-- quelle: https://monde-diplomatique.de/artikel/!3202447 -->
+    </p>
 
   </div>
 
 
-
+  <script src="mouse.js"></script>
   <script src="main.js"></script>
 </body>
 
