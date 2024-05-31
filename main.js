@@ -19,32 +19,35 @@ document.addEventListener("scroll", function () {
 
 // Landingpage einfärbung Text
 document.addEventListener("DOMContentLoaded", function () {
-  function highlightWords(elementId, wordsToHighlight) {
+  function highlightWords(elementId, wordsToHighlight, highlightColor) {
     var content = document.getElementById(elementId);
     if (content) {
       var text = content.innerHTML;
       wordsToHighlight.forEach(function (word) {
         var regex = new RegExp(`(${word})`, "gi");
-        text = text.replace(regex, '<span class="highlight">$1</span>');
+        text = text.replace(
+          regex,
+          `<span style="color: ${highlightColor};">$1</span>`
+        );
       });
       content.innerHTML = text;
     }
   }
 
   var wordsToHighlight = [
-    "Frau",
-    "Fotografie",
-    "Fotografinnen",
-    "Fotografin",
-    "fotografiert",
     "Frauen",
     "fotografierte",
+    "fotografiert",
+    "Fotografien",
+    "Fotografinnen",
+    "Fotografin",
+    "Frau",
   ];
 
-  highlightWords("landingcontent", wordsToHighlight);
-  highlightWords("WARD81text", wordsToHighlight);
-  highlightWords("StreetwiseText", wordsToHighlight);
-  highlightWords("TwinsText", wordsToHighlight);
+  highlightWords("landingcontent", wordsToHighlight, "#ffe500");
+  highlightWords("WARD81text", wordsToHighlight, "#ffe500");
+  highlightWords("StreetwiseText", wordsToHighlight, "#ffe500");
+  highlightWords("TwinsText", wordsToHighlight, "#ffe500");
 });
 
 // MORE button
