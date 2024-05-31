@@ -13,12 +13,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <style>
-  body {
-    background-color: white;
-  }
 </style>
 
 <body>
+
+  <div class="custom-cursor" id="js-cursor">
+    <div class="cursor__small abs-center" id="js-cursor__small"></div>
+    <div class="cursor__big abs-center" id="js-cursor__big">
+    </div>
+  </div>
 
   <div id="text">
     <div class="center">
@@ -52,15 +55,14 @@
   </div>
 
   <div id="image-hover-text">
-    <div style="margin-left: 246pt; top: 300pt">
       <figure>
         <img id="cover" src="/maryellenmark-fotos/Ward81/mem_cover.jpeg"
-          alt="cover Marry Ellen Mark" width="500px" height="auto" />
+          alt="cover Marry Ellen Mark" width="35%" height="auto" />
         <figcaption class="img-caption">
           Kissing in a bar, New York, 1977, Mary Ellen Mark
         </figcaption>
       </figure>
-    </div>
+   
 
     <div id="popup2" class="popup">
       <div class="popup-cover-content">
@@ -329,7 +331,7 @@
 
 
 
-
+  <script src="mouse.js"></script>
   <script src="main.js"></script>
 
 </body>
