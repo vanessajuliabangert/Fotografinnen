@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-family: "Roboto Mono", monospace;
-  font-size: clamp(5pt, 10vw, 120pt);
+  font-size: clamp(5pt, 7vw, 120pt);
   font-weight: bold;
   color: black;
 }
@@ -73,6 +73,7 @@ p {
   position: fixed;
 }
 
+/* class fpr all element being on the right side of  the landing page */
 .bottom-text {
   display: flex;
   flex-direction: column;
@@ -129,7 +130,8 @@ p {
 
 .artistmenu ul li a {
   display: block;
-  padding: 5px 20px;
+  padding: 5px 0px;
+  padding-right: 20px;
   font-size: 20pt;
   cursor: pointer;
   text-decoration: none;
@@ -154,6 +156,12 @@ p {
   width: auto;
   transition: background-image 2s ease-in-out;
   background-size: contain;
+}
+
+.background-image-container .artistmenu:hover {
+  width: fit-content;
+  background-color: white;
+  padding-right: 15px;
 }
 
 
@@ -200,6 +208,42 @@ p {
     padding: 0px 0px;
   }
 
+}
+
+/* Passwort protection */
+
+#protectedContent {
+  display: none;
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ffe500;
+  border-radius: 8px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.buttonPasswort {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonPasswort:hover {
+  background-color: white;
+  color: #000;
+}
+
+#errorMessage {
+  color: red;
+  font-size: clamp(2pt, 1vw, 10pt);
+  display: none;
 }
 
 
@@ -259,12 +303,14 @@ p {
 }
 
 #landingpagepicture {
-  width: 745pt;
-  height: 520pt;
+  width: 747pt;
+  height: 521pt;
   margin-top: -25pt;
   margin-left: 34pt;
-  background-color: black;
+  background-color: #aaa;
 }
+
+
 
 #landingcontent {
   width: 65vw;
@@ -652,7 +698,6 @@ p {
   grid-column-end: 5;
   grid-row-start: 7;
   grid-row-end: 12;
-
 }
 
 .gallery__item--12 {
@@ -662,6 +707,20 @@ p {
   grid-row-end: 6;
 }
 
+.gallery__item--13 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 12;
+  grid-row-end: 21;
+}
+
+.gallery__item--14 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 13;
+
+}
 
 
 
@@ -728,6 +787,7 @@ p {
 
 
 
+
 /* timeline */
 
 .bigdate {
@@ -744,6 +804,7 @@ p {
   position: relative;
   padding: 20px;
 }
+
 
 
 .timeline:before {
@@ -993,7 +1054,7 @@ p {
 }
 
 #HA_container p {
-  font-size: clamp(5pt, 2vw, 20pt);
+  font-size: clamp(5pt, 2vw, 15pt);
 }
 
 .big_content {
@@ -1010,9 +1071,6 @@ p {
     flex-direction: column;
     align-items: center;
   }
-
-
-
 
   .small_content,
   .content_25 {

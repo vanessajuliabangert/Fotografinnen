@@ -198,6 +198,7 @@ enhance("channel-link4");
 enhance("channel-link5");
 enhance("WARD81");
 enhance("twin");
+enhance("");
 
 // backgorund image change functions
 
@@ -210,3 +211,23 @@ function resetBackground() {
   const container = document.querySelector(".background-image-container");
   container.style.backgroundImage = `url("landingbackground_white.png")`;
 }
+
+// passwortcheck
+function checkPassword() {
+  const correctPassword = "123"; // Ändern Sie dies in Ihr gewünschtes Passwort
+  const inputPassword = document.getElementById("password").value;
+  const errorMessage = document.getElementById("errorMessage");
+
+  if (inputPassword === correctPassword) {
+    localStorage.setItem("isAuthenticated", "true");
+    window.location.href = "fotografinnen.html"; // Ändern Sie dies in die gewünschte Zielseite
+  } else {
+    errorMessage.style.display = "block";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("isAuthenticated") === "true") {
+    window.location.href = "fotografinnen.html"; // Ändern Sie dies in die gewünschte Zielseite
+  }
+});
