@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+::selection {
+  background-color: red;
+  /* Ändert die Hintergrundfarbe der Markierung */
+  color: white;
+  /* Ändert die Textfarbe der Markierung */
+}
+
 body {
   font-family: "Roboto Mono", monospace;
   font-size: clamp(5pt, 4vw, 20pt);
@@ -53,8 +60,6 @@ p {
   font-size: clamp(5pt, 2vw, 20pt);
   text-align: justify;
 }
-
-
 
 /* Position Classes*/
 .center {
@@ -271,7 +276,19 @@ input[type="password"] {
   color: white;
   font-family: "Archivo Black", sans-serif;
   font-weight: bold;
+  font-size: clamp(5pt, 5vw, 60pt);
+  border: none;
+}
+
+.thickbuttonopticflorrence {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #003e0b;
   color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bold;
   font-size: clamp(5pt, 5vw, 60pt);
   border: none;
 }
@@ -307,7 +324,7 @@ input[type="password"] {
   height: 521pt;
   margin-top: -25pt;
   margin-left: 34pt;
-  background-color: #aaa;
+  background-color: white;
 }
 
 
@@ -350,12 +367,12 @@ input[type="password"] {
   display: none;
 }
 
-.popup-cover-content {
+/* .popup-cover-content {
   font-size: small;
   color: #adadad;
   margin-left: -110%;
   width: 40%;
-}
+}  */
 
 .popup-content {
   background-color: #ffe500;
@@ -722,6 +739,13 @@ input[type="password"] {
 
 }
 
+.gallery__item--15 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 14;
+  grid-row-end: 21;
+}
+
 
 
 .center figure {
@@ -768,6 +792,10 @@ input[type="password"] {
   margin-left: 10%;
   padding-right: 5vw;
 }
+
+
+
+
 
 .lifeCover2col {
   display: flex;
@@ -1078,4 +1106,59 @@ input[type="password"] {
     margin-top: 5px;
   }
 
+}
+
+/* Styles for the carousel container and its elements */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+
+}
+
+.carousel {
+  position: relative;
+  width: 600px;
+}
+
+.carousel__viewport {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  /* Centers the image horizontally */
+  align-items: center;
+  /* Centers the image vertically */
+  height: 100%;
+  /* Makes sure the slide takes up the full height */
+}
+
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffe500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+/* Move the buttons outside of the carousel */
+.carousel__prev {
+  left: -50px;
+  /* Adjust this value to control how far outside the button is */
+}
+
+.carousel__next {
+  right: -50px;
+  /* Adjust this value to control how far outside the button is */
 }

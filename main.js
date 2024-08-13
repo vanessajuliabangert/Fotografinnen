@@ -1,4 +1,29 @@
-// Fotografie scroll effect
+// MORE button
+document.addEventListener("DOMContentLoaded", () => {
+  const moreBtn = document.getElementById("moreBtn");
+  const popup = document.getElementById("popup");
+  const closeBtn = document.getElementById("closeBtn");
+
+  moreBtn.addEventListener("click", () => {
+    // Toggle the display property of the popup
+    if (popup.style.display === "block") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "block";
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
+
 document.addEventListener("scroll", function () {
   var fixedFotograf = document.getElementById("fixedFotograf");
   var innen = document.getElementById("innen");
@@ -15,6 +40,28 @@ document.addEventListener("scroll", function () {
     fixedFotograf.style.position = "fixed";
     fixedFotograf.style.top = "0";
   }
+});
+
+const prevButton = document.querySelector(".carousel__prev");
+const nextButton = document.querySelector(".carousel__next");
+const viewport = document.querySelector(".carousel__viewport");
+const slides = document.querySelectorAll(".carousel__slide");
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  viewport.style.transform = `translateX(${offset}%)`;
+}
+
+prevButton.addEventListener("click", () => {
+  currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+  updateCarousel();
+});
+
+nextButton.addEventListener("click", () => {
+  currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+  updateCarousel();
 });
 
 // Landingpage einfärbung Text
@@ -51,32 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   highlightWords("StreetwiseText", wordsToHighlight, "#ffe500");
   highlightWords("TwinsText", wordsToHighlight, "#ffe500");
   highlightWords("helenaalmeidazitat", wordsToHighlight, "#01348f");
-});
-
-// MORE button
-document.addEventListener("DOMContentLoaded", () => {
-  const moreBtn = document.getElementById("moreBtn");
-  const popup = document.getElementById("popup");
-  const closeBtn = document.getElementById("closeBtn");
-
-  moreBtn.addEventListener("click", () => {
-    // Toggle the display property of the popup
-    if (popup.style.display === "block") {
-      popup.style.display = "none";
-    } else {
-      popup.style.display = "block";
-    }
-  });
-
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target === popup) {
-      popup.style.display = "none";
-    }
-  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
