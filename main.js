@@ -42,28 +42,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-const prevButton = document.querySelector(".carousel__prev");
-const nextButton = document.querySelector(".carousel__next");
-const viewport = document.querySelector(".carousel__viewport");
-const slides = document.querySelectorAll(".carousel__slide");
-
-let currentIndex = 0;
-
-function updateCarousel() {
-  const offset = -currentIndex * 100;
-  viewport.style.transform = `translateX(${offset}%)`;
-}
-
-prevButton.addEventListener("click", () => {
-  currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-  updateCarousel();
-});
-
-nextButton.addEventListener("click", () => {
-  currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-  updateCarousel();
-});
-
 // Landingpage einfärbung Text
 document.addEventListener("DOMContentLoaded", function () {
   function highlightWords(elementId, wordsToHighlight, highlightColor) {
@@ -173,6 +151,28 @@ window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const prevButton = document.querySelector(".carousel__prev");
+const nextButton = document.querySelector(".carousel__next");
+const viewport = document.querySelector(".carousel__viewport");
+const slides = document.querySelectorAll(".carousel__slide");
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  viewport.style.transform = `translateX(${offset}%)`;
+}
+
+prevButton.addEventListener("click", () => {
+  currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+  updateCarousel();
+});
+
+nextButton.addEventListener("click", () => {
+  currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+  updateCarousel();
+});
 
 // fancy text animation
 const enhance = (id) => {
